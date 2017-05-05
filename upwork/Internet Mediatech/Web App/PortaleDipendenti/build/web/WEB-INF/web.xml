@@ -8,6 +8,10 @@
         <servlet-name>GetUserServlet</servlet-name>
         <servlet-class>GetUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetSingleUserServlet</servlet-name>
+        <servlet-class>GetSingleUserServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>GetUserServlet</servlet-name>
         <url-pattern>/UserList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetSingleUserServlet</servlet-name>
+        <url-pattern>/GetSingleUserServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

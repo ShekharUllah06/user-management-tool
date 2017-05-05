@@ -14,4 +14,5 @@ import java.util.List;
  */
 public interface UserDAOLocal {
     public List<UserLogin> getAllUser();
+    public UserLogin getSingleUser(int id);
 }

@@ -22,8 +22,15 @@ public class UserDAO implements UserDAOLocal {
     @Override
     public List<UserLogin> getAllUser() {
         EntityManager em = emf.createEntityManager();
-        List<UserLogin> s = (List<UserLogin>) em.createQuery("select e from UserLogin e").getResultList();
-        return s;
+        List<UserLogin> userList = (List<UserLogin>) em.createQuery("select e from UserLogin e").getResultList();
+        return userList;
+    }
+
+    @Override
+    public UserLogin getSingleUser(int id) {
+        EntityManager em = emf.createEntityManager();
+        UserLogin user = (UserLogin) em.createQuery("select e from UserLogin e where e.id='" + id + "'").getSingleResult();
+        return user;
     }
 
 }
