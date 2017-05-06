@@ -41,6 +41,8 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        
 
     </head>
 
@@ -57,7 +59,8 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">Edit User Information</h3>
                         </div>
-                        <form class="form-horizontal" action="">
+                        <form class="form-horizontal" action="UpdateUser">
+                            <input type="hidden" name="id" value="${singleUser.id}">
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="fullName">Full Name:</label>
                                 <div class="col-sm-9">
@@ -113,7 +116,7 @@
                                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Save">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input class="btn btn-lg btn-warning btn-block" type="submit" value="Change Password">
+                                        
                                     </div>
                                 </div>
 

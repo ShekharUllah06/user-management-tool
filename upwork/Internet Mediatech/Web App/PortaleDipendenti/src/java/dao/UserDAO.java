@@ -9,6 +9,7 @@ import bean.UserLogin;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 /**
@@ -31,6 +32,24 @@ public class UserDAO implements UserDAOLocal {
         EntityManager em = emf.createEntityManager();
         UserLogin user = (UserLogin) em.createQuery("select e from UserLogin e where e.id='" + id + "'").getSingleResult();
         return user;
+    }
+
+    @Override
+    public boolean updateUser(int id, String fullName, String userName, String email, String address, String city, String zip) {
+        EntityManager em = emf.createEntityManager();
+        UserLogin userLogin = em.find(UserLogin.class, id);
+        userLogin.setFullName(fullName);
+        userLogin.setUsername(userName);
+        userLogin.setEmail(email);
+        userLogin.setAddress(address);
+        userLogin.setCity(city);
+        userLogin.setZipCode(zip);
+        
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.persist(userLogin);
+        tx.commit();
+        return true;
     }
 
 }

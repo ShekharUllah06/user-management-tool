@@ -15,4 +15,5 @@ import java.util.List;
 public interface UserDAOLocal {
     public List<UserLogin> getAllUser();
     public UserLogin getSingleUser(int id);
+    public boolean updateUser(int id,String fullName,String userName, String email,String address,String city,String zip);
 }
