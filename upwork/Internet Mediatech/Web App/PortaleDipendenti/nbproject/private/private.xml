@@ -3,10 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/UpdateUserServlet.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/GetUserServlet.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/web/edituser.jsp</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/bean/ManageSID.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/util/DocumentListing.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/web/WEB-INF/web.xml</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/web/userList.jsp</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/dao/UserDAOLocal.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/conf/persistence.xml</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/web/home.jsp</file>
             <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/dao/LoginDAOLocal.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/util/Doc.java</file>
             <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/dao/LoginDAO.java</file>
             <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/dao/UserDAO.java</file>
-            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/dao/UserDAOLocal.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/LoginServlet.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/web/menu.jspf</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/GetSingleUserServlet.java</file>
+            <file>file:/D:/upwork/Internet%20Mediatech/Web%20App/PortaleDipendenti/src/java/GetDocumentListServlet.java</file>
         </group>
     </open-files>
 </project-private>

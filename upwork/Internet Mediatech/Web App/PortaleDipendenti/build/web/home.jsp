@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     if (session.getAttribute("loginName") == null) {
         request.getRequestDispatcher("index.jsp").forward(request, response);
@@ -45,7 +46,7 @@
 
     <body>
         <%@ include file="menu.jspf" %>
-
+        <c:import url="/DocumentList" />
         <!-- Page Content -->
         <div class="container">
 
@@ -60,8 +61,30 @@
                 </div>
                 <div class="col-md-8">
                     <h1>Portale Dipendenti</h1>
-                    <p class="lead">Welcome <%= session.getAttribute("loginName")%></p>
+                    <table style="width: 100%;" class="table table-hover table-inverse">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Document Name</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%! int row = 0;%> 
+                            <c:forEach items="${allDocuments}" var="stud">
+                                <tr>
+                                    <th scope="row"><%= row = row + 1%></th>
+                                    <td>${stud.name}</td>
+
+                                    <td><button type="button" class="btn btn-warning" name="edit" value="Download"onclick="location.href='${stud.downloadLink}';">Download</button></td>
+
+                                </tr>
+                            </c:forEach>
+                            <% row = 0;%>
+                        </tbody>
+                    </table>
                 </div>
+
             </div>
             <!-- /.row -->
 

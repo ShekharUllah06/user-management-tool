@@ -42,7 +42,20 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-        
+         <script language="javascript">
+            function editRecord() {
+                var f = document.form;
+                f.method = "post";
+                f.action = 'home.jsp';
+                f.submit();
+            }
+            function deleteRecord(id) {
+                var f = document.form;
+                f.method = "post";
+                f.action = 'delete.jsp?id=' + id;
+                f.submit();
+            }
+        </script>
 
     </head>
 
@@ -59,7 +72,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">Edit User Information</h3>
                         </div>
-                        <form class="form-horizontal" action="UpdateUser">
+                        <form class="form-horizontal">
                             <input type="hidden" name="id" value="${singleUser.id}">
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="fullName">Full Name:</label>
@@ -113,10 +126,10 @@
                             <div class="form-group"> 
                                 <div class="col-sm-offset-3 col-sm-9">
                                     <div class="col-sm-3">
-                                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Save">
+                                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Save"  onclick="form.action='UpdateUser';">
                                     </div>
                                     <div class="col-sm-6">
-                                        
+                                        <input class="btn btn-lg btn-warning btn-block" type="submit" value="Change Password"  onclick="form.action='changepassword.jsp';">
                                     </div>
                                 </div>
 

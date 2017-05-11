@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 
-import bean.UserLogin;
 import dao.LoginDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import util.DocumentListing;
 
 /**
  *
@@ -37,8 +38,14 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         LoginDAO ld = new LoginDAO();
         if (ld.checkUser(userName, password)) {
-            session.setAttribute("loginName", userName);
-            request.getRequestDispatcher("home.jsp").forward(request, response);
+            try {
+                session.setAttribute("loginName", userName);
+                DocumentListing dl=new DocumentListing();
+                request.setAttribute("allDocuments", dl.documentsName());
+                request.getRequestDispatcher("home.jsp").forward(request, response);
+            } catch (Exception ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else {
             request.getRequestDispatcher("loginerror.jsp").forward(request, response);
         }

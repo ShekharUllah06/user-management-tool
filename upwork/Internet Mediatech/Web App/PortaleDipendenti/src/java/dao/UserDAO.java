@@ -35,7 +35,7 @@ public class UserDAO implements UserDAOLocal {
     }
 
     @Override
-    public boolean updateUser(int id, String fullName, String userName, String email, String address, String city, String zip) {
+    public boolean updateUser(int id, String fullName, String userName, String email, String address, String city, String zip, boolean isAdmin) {
         EntityManager em = emf.createEntityManager();
         UserLogin userLogin = em.find(UserLogin.class, id);
         userLogin.setFullName(fullName);
@@ -44,7 +44,7 @@ public class UserDAO implements UserDAOLocal {
         userLogin.setAddress(address);
         userLogin.setCity(city);
         userLogin.setZipCode(zip);
-        
+        userLogin.setAdmin(isAdmin);
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.persist(userLogin);

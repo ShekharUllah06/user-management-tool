@@ -16,6 +16,10 @@
         <servlet-name>UpdateUserServlet</servlet-name>
         <servlet-class>UpdateUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetDocumentListServlet</servlet-name>
+        <servlet-class>GetDocumentListServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
         <url-pattern>/UpdateUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetDocumentListServlet</servlet-name>
+        <url-pattern>/DocumentList</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

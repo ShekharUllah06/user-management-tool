@@ -30,15 +30,20 @@ public class UpdateUserServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         UserDAO user = new UserDAO();
-         String fullName = request.getParameter("fullName");
-         String userName = request.getParameter("username");
-         String email = request.getParameter("email");
-         String address = request.getParameter("address");
-         String city = request.getParameter("city");
-         String zip = request.getParameter("zip");
-         //String sId = request.getParameter("id");
+        String fullName = request.getParameter("fullName");
+        String userName = request.getParameter("username");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        String city = request.getParameter("city");
+        String zip = request.getParameter("zip");
+        String strAdmin = request.getParameter("admin");
+        boolean admin=false;
+        if(strAdmin!=null){
+            admin=true;
+        }
+        //String sId = request.getParameter("id");
         int id = Integer.parseInt(request.getParameter("id"));
-        if(user.updateUser(3,fullName,userName,email,address,city,zip)){
+        if (user.updateUser(id, fullName, userName, email, address, city, zip,admin)) {
             response.sendRedirect("userList.jsp");
         }
     }
